@@ -14,6 +14,7 @@ Using the provided dependencies, please build two services:
             newestCompletion: Date;
             creator: { 
                id: number;
+               avatar: string;
                name: string;
                tags: string[];
             }
@@ -23,8 +24,8 @@ Using the provided dependencies, please build two services:
       
 2. A client-side React application, using the following API to display a list of exercises
    1. retrieve the data from the API prepared in step 1.
-   2. implement design on image below using flexbox.
-      ![design](dependencies/zadanko.png)
+   2. follow the design presented on the image below. Use flexbox.
+      ![design](dependencies/design.png)
    3. implement a toggle, that changes the sorting to display workouts with most completions at the top.
    4. please handle loading and error states
 
