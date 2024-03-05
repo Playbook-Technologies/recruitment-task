@@ -1,8 +1,8 @@
 ## Description
+Using the provided dependencies (description below) , please build two services:
 
-Using the provided dependencies, please build two services:
-1. API returning data to your frontend application
-   1. it should expose a single /workouts endpoint returning a sorted list of exercises. Order it by exercise's most recent completion date, descending (with most recently completed workout at the top)
+### 1. API returning data to your frontend application
+   1. it should expose a single `/workouts` endpoint, returning a sorted list of workouts. Order it by workouts's most recent completion date, descending (with most recently completed workout at the top)
    2. it should retrieve the data from the pre-built dependencies: the Postgres database and the complimentary microservice (see `#Pre-built dependencies`)
    3. it should expect a header `X-Api-Secret` with a value `abc`. If not present, API should return a `403 - Forbidden`
    4. the type returned by the API should be as follows:
@@ -20,19 +20,20 @@ Using the provided dependencies, please build two services:
             }
          }
       ```
+   5. The "tracking function" present in the codebase should be kept, but improved so it does not slow down the query.
 
       
-2. A client-side React application, using the following API to display a list of exercises
+### 2. A client-side React application, using the following API to display a list of exercises
    1. retrieve the data from the API prepared in step 1.
-   2. follow the design presented on the image below. Use flexbox.
+   2. follow the design presented on the image below. Use flexbox. It does not have to strictly follow the styling - focus on displaying the data.
       ![design](dependencies/design.png)
    3. implement a toggle, that changes the sorting to display workouts with most completions at the top.
-   4. please handle loading and error states
+   4. handle loading and error states
 
 ## Setup
 1. Begin with `docker-compose up -d`
-2. Task #1 (Nest.js) app is exposed locally on localhost:3124, implement your solution in `task/backend/src/app.service.ts`
-3. Task #2 (React) app is exposed locally on localhost:3125, implement your solution in `task/frontend/src/App.tsx`
+2. Task #1 (Nest.js) app is exposed locally on localhost:3125, implement your solution in `task/backend/src/app.service.ts`
+3. Task #2 (React) app is exposed locally on localhost:3124, implement your solution in `task/frontend/src/App.tsx`
 
 ## Pre-built dependencies
 
