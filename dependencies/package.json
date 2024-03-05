@@ -1,0 +1,15 @@
+{
+  "name": "recruitment-task",
+  "version": "1.0.0",
+  "main": "api.js.js",
+  "scripts": {
+    "start": "node api.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Playbook-Technologies/recruitment-task.git"
+  },
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}

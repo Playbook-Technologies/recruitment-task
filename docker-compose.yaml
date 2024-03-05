@@ -1,0 +1,48 @@
+version: "3.7"
+
+services:
+  frontend:
+    image: "node:16-alpine"
+    command: sh -c "yarn && yarn build && yarn start"
+    working_dir: /app
+    ports:
+      - 3124:3000
+    volumes:
+      - ./task/frontend/:/app
+
+  backend:
+    image: "node:16-alpine"
+    command: sh -c "yarn && yarn start:dev"
+    working_dir: /app
+    ports:
+      - 3125:3000
+    volumes:
+      - ./task/backend/:/app
+
+  api:
+    image: "node:16-alpine"
+    command: sh -c "yarn && yarn start"
+    working_dir: /app
+    ports:
+      - 3123:3000
+    volumes:
+      - ./dependencies/:/app
+    networks:
+      default:
+        aliases:
+          - api
+
+  postgres:
+    image: "postgres:11.14-alpine"
+    ports:
+      - 5432:5432
+    volumes:
+      - ./dependencies/db-init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    networks:
+      default:
+        aliases:
+          - postgres
