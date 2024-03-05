@@ -25,19 +25,19 @@ Task entrypoint: `backend/src/app.tsx`
 2. A client-side React application, using the following API to display a list of exercises
    1. retrieve the data from the API prepared in step 1.
    2. implement design on image below using flexbox.
-      ![design](./dependencies/zadanko.png)
+      ![design](dependencies/zadanko.png)
    3. implement a toggle, that changes the sorting to display workouts with most completions at the top.
    4. please handle loading and error states
 
-Task entrypoint: `frontend/src/App.tsx`
+### Task entrypoint: `frontend/src/App.tsx`
 
-## Begin with `docker-compose up -d`
+ ### Begin with `docker-compose up -d`
 
 ## Pre-built dependencies
 
 Please use the following dependencies
 
-1. API exposed on `port 3123` with a single endpoint, returning creators' details
+1. there's an API exposed on the port `3123` with a single endpoint, returning creators' details
 ```
 GET /{creatorId}
 
@@ -51,7 +51,7 @@ Response:
 ```
 
 
-2. Postgres database on `port 5543` with following tables, containing workouts data
+2. there's also a Postgres database on the port `5543` with following tables, containing workout completions data
 ```
 workouts
 +--+-----------+----------+
