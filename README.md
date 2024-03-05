@@ -31,7 +31,10 @@ Task entrypoint: `backend/src/app.tsx`
 
 ### Task entrypoint: `frontend/src/App.tsx`
 
- ### Begin with `docker-compose up -d`
+## Setup
+1. Begin with `docker-compose up -d`
+2. Task #1 (Nest.js) app is exposed locally on localhost:3124, implement your solution in `task/backend/src/app.service.ts`
+3. Task #2 (React) app is exposed locally on localhost:3125, implement your solution in `task/frontend/src/App.tsx`
 
 ## Pre-built dependencies
 
