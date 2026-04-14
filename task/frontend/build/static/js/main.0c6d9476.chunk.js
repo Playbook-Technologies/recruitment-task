@@ -1,0 +1,2 @@
+(this["webpackJsonpfrontend-recruitment-task"]=this["webpackJsonpfrontend-recruitment-task"]||[]).push([[0],{12:function(t,e,n){},14:function(t,e,n){"use strict";n.r(e);var r=n(3),c=(n(12),n(0));function s(){return Object(c.jsx)("div",{className:"App",children:Object(c.jsx)(o,{})})}function o(){return Object(c.jsx)(c.Fragment,{children:"Workouts List"})}const i=document.getElementById("root");Object(r.createRoot)(i).render(Object(c.jsx)(s,{}))}},[[14,1,2]]]);
+//# sourceMappingURL=main.0c6d9476.chunk.js.map
