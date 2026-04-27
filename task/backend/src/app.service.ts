@@ -10,36 +10,30 @@ export class AppService {
     private readonly httpService: HttpService,
   ) {}
 
-  /**
-   * @return {Promise}
-   */
+  /** @return {Promise} */
   async getWorkouts() {
     /**
-     * TODO: Retrieve workout completion data from "workout_completions"
-     * Optionally use raw sql if you're not familiar with QueryBuilder's API.
+     * TODO 1: Retrieve workout completion data from the "workout_completions" table
      */
-    const workouts = this.database
-      .createQueryBuilder()
-      .from("workouts", "workout")
-      .execute();
-    // const workouts = await this.database.createQueryRunner.query('SELECT * FROM "workouts"')
+    const workouts = await this.database
+      .createQueryRunner()
+      .query('SELECT * FROM "workouts"');
 
     /**
-     * TODO: Optimize.
+     * TODO 2: Retrieve creators data
+     * @example await this.httpService.get('http://api:3000/creators/{creatorId}').toPromise()
+     */
+
+    /**
+     * TODO 3: Optimize.
      * This method takes 3 seconds to resolve. Make sure it's being run,
      * but the query does not have to wait for it to be resolved. (Task 1.3)
      */
-    await this.trackQuery();
+    await this.doSomeAnalytics();
 
-    /**
-     * TODO: Retrieve creators data
-     * @example http://api:3000/{creatorId}
-     */
     return workouts;
   }
 
-  /** @private Nevermind what it does, just make sure it's being called. (Details in Readme: Task 1.3) */
-  private async trackQuery() {
-    return this.httpService.get("http://api:3000/track-query").toPromise();
-  }
+  /** @internal Function call that takes 3 seconds */
+  private doSomeAnalytics = () => new Promise((r) => setTimeout(r, 3000));
 }

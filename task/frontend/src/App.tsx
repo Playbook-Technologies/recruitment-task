@@ -1,12 +1,8 @@
 import "./styles.css";
 
-export type Workout = {
-    id: number;
-    name: string;
-    creator_id: number;
-};
+export type Workout = any;
 
-function fetchPhotos() {
+function fetchWorkouts() {
     /** TODO: finish */
     return fetch("http://localhost:3125/workouts");
 }

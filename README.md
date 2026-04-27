@@ -50,7 +50,7 @@ The applications you'll be working with are already up and running in following 
 ## `api`
 There's an API exposing the port `3123` to the host, with a single endpoint, returning creators' details
 ```
-GET /{creatorId}
+GET /creators/{creatorId}
 
 Response:
 {

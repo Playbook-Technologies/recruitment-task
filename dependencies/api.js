@@ -5,26 +5,26 @@ const creators = {
   '1': {
     id: 1,
     name: 'Brad Pitt',
-    avatar: 'https://via.placeholder.com/150/92c952',
+    avatar: 'https://placehold.co/150',
     tags: ['calisthenics', 'strength']
 
   },
   '2': {
     id: 2,
     name: 'Meryl Streep',
-    avatar: 'https://via.placeholder.com/150/771796',
+    avatar: 'https://placehold.co/150',
     tags: ['yoga', 'mobility']
   },
   '3': {
     id: 3,
     name: 'Leonardo DiCaprio',
-    avatar: 'https://via.placeholder.com/150/24f355',
+    avatar: 'hhttps://placehold.co/150',
     tags: ['lean', 'endurance']
   },
   '4': {
     id: 4,
     name: 'Matt Damon',
-    avatar: 'https://via.placeholder.com/150/d32776',
+    avatar: 'https://placehold.co/150',
     tags: undefined,
   }
 }
@@ -35,7 +35,7 @@ app.get('/track-query', async (req, res) => {
   return res.json('tracked');
 });
 
-app.get('/:creatorId', (req, res) => {
+app.get('/creators/:creatorId', (req, res) => {
   const creator = creators[req.params.creatorId];
   return creator ? res.json(creator) : res.status(404).send();
 });
