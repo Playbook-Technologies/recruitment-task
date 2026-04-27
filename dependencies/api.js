@@ -5,20 +5,20 @@ const creators = {
   '1': {
     id: 1,
     name: 'Brad Pitt',
-    avatar: 'https://placehold.co/150',
+    avatar: 'https://placehold.co/150/f08/bba/png',
     tags: ['calisthenics', 'strength']
 
   },
   '2': {
     id: 2,
     name: 'Meryl Streep',
-    avatar: 'https://placehold.co/150',
+    avatar: 'https://placehold.co/150/dd0/0bf/png',
     tags: ['yoga', 'mobility']
   },
   '3': {
     id: 3,
     name: 'Leonardo DiCaprio',
-    avatar: 'hhttps://placehold.co/150',
+    avatar: 'https://placehold.co/150/def/abc/png',
     tags: ['lean', 'endurance']
   },
   '4': {
