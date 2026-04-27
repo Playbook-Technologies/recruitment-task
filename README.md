@@ -1,22 +1,23 @@
-## Description
+# Description
 Your goal is to use the provided dependencies to implement a simple API and a client-side application.
 The applications you'll be working with are already up and running in following containers 
 
 ![screen](dependencies/screen.png)
 
-### Setup
+# Setup
 
-1. Begin with `docker-compose up -d`
-2. Task #1 (Nest.js) app is exposed locally on `localhost:3125`
-   - start implementing your solution in `task/backend/src/app.service.ts`
-3. Task #2 (React) app is exposed locally on `localhost:3124`
-   - start implementing your solution in `task/frontend/src/App.tsx`
-4. You can look up the dependencies' data (`postgres` and `api`) at the bottom of this README
+### 1. Begin with `docker-compose up -d`
+### 2. Check `localhost:3125` in your browser
+- This is the API served by your Task #1 app (Nest.js)
+- start implementing your solution in `task/backend/src/app.service.ts`
+### 3. Check `localhost:3124` in your browser
+- This is the frontend application - your Task #2 app (React)
+- start implementing your solution in `task/frontend/src/App.tsx`
 ---
-## Task Walkthrough
+# Task Walkthrough
 
-### 1. API returning data to your frontend application
-   1. expose a single `/workouts` endpoint, returning a list of workouts. It should retrieve necessary data from the pre-built dependencies: the Postgres database and the complimentary microservice (see `#Pre-built dependencies`)
+## Task #1. API returning data to your frontend application
+   1. Expose a single `/workouts` endpoint, retuning a list of workouts like below:
       ```ts
          {
             workoutId: number;
@@ -36,7 +37,7 @@ The applications you'll be working with are already up and running in following 
    4. **(NTH)** The endpoint should expect a header `X-Api-Secret` with a value `abc`. If not present, API should return a `403 - Forbidden`
 
       
-### 2. A client-side React application, using the following API to display a list of exercises
+## Task #2. A client-side React application, using the following API to display a list of exercises
    1. Retrieve the data from the API prepared in step 1.
    2. Follow the design presented on the image below. Use flexbox. It does not have to strictly follow the styling - focus on displaying the data.
       ![design](dependencies/design.png)
